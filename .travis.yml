@@ -72,6 +72,6 @@ cache:
     directories:
         - "~/.platformio"
 install:
-    - pip install -U platformi
+    - pip install -U platformio
 script:
     - platformio run
