@@ -5,7 +5,7 @@
 #include "ESPixelDemo.h"
 
 ESPixelDemo::ESPixelDemo(NeoPixelBus& bus) {
-    strip = bus;
+    strip = &bus;
     i = 0;
 }
 
@@ -32,8 +32,8 @@ void ESPixelDemo::loop() {
             panic();
     }
 
-    strip.SetPixelColor(i, c);
-    strip.Show();
+    strip->SetPixelColor(i, c);
+    strip->Show();
 
     if (i == 150) {
         Serial.println("Reset loop");

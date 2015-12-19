@@ -8,7 +8,7 @@
 #include <NeoPixelBus.h>
 #include "ESPixel.h"
 
-class ESPixelDemo: public ESPixel {
+class ESPixelDemo/*: public ESPixel */{
 
 public:
     ESPixelDemo(NeoPixelBus& bus);
@@ -16,7 +16,7 @@ public:
 
 
 private:
-    NeoPixelBus strip;
+    NeoPixelBus *strip;
     int i;
 
 };
